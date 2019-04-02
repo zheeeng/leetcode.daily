@@ -30,7 +30,7 @@
  *
  */
 func twoSum(nums []int, target int) []int {
-	m := make(map[int]int)
+	m := make(map[int]int, len(nums))
 	for i, n := range nums {
 		if ii, ok := m[target-n]; ok {
 			return []int{ii, i}
@@ -40,4 +40,3 @@ func twoSum(nums []int, target int) []int {
 	}
 	return []int{0, 0}
 }
-
