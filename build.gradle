@@ -1,0 +1,5 @@
+buildscript {
+    dependencies {
+    	classpath "org.jetbrains.kotlin:kotlin-stdlib"
+    }
+}
