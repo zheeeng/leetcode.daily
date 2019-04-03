@@ -65,12 +65,11 @@ class Solution_prefixesDivBy5_0 {
             { index, (acc, ret), inc ->
                 Pair(
                     ((acc shl 1) + inc)
-                        .let{ if (it >= 5) (it - 5) else it }
-                        .also{ ret[index] = it % 5 == 0 },
+                        .let { if (it >= 5) (it - 5) else it }
+                        .also { ret[index] = it % 5 == 0 },
                     ret
                 )
             }
         ).second
     }
 }
-

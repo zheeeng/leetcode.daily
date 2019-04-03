@@ -63,17 +63,16 @@ class Solution_isValid_0 {
     fun isValid(s: String) =
         s.fold(
             mutableListOf<Char>(),
-            {ca, c -> when(c) {
-                '(' -> ca.add(')').let{ ca }
-                '[' -> ca.add(']').let{ ca }
-                '{' -> ca.add('}').let{ ca }
+            { ca, c -> when (c) {
+                '(' -> ca.add(')').let { ca }
+                '[' -> ca.add(']').let { ca }
+                '{' -> ca.add('}').let { ca }
                 in ")]}" -> when {
                     ca.isEmpty() -> return false
                     ca.last() != c -> return false
-                    else -> ca.removeAt(ca.size - 1).let{ ca }
+                    else -> ca.removeAt(ca.size - 1).let { ca }
                 }
                 else -> return false
-            }}
+            } }
         ).size == 0
 }
-

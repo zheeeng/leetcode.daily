@@ -62,11 +62,11 @@ class Solution_prefixesDivBy5_1 {
     fun prefixesDivBy5(A: IntArray): BooleanArray {
         return A.fold(
             Pair(0, BooleanArray(0)),
-            {(acc, ret), inc ->
-                acc.let{ it shl 1 }.let{ it + inc }.let{ if (it >= 5) (it - 5) else it }
-                    .let{ Pair(it, ret.plus(it % 5 == 0)) }
+            { (acc, ret), inc ->
+                acc.let { it shl 1 }.let { it + inc }
+                    .let { if (it >= 5) (it - 5) else it }
+                    .let { Pair(it, ret.plus(it % 5 == 0)) }
             }
         ).second
     }
 }
-
