@@ -44,7 +44,7 @@
  *     Right *TreeNode
  * }
  */
-func bfs(ret *[][]int, level int, node *TreeNode) {
+func dfs(ret *[][]int, level int, node *TreeNode) {
 	if node == nil {
 		return
 	}
@@ -57,11 +57,11 @@ func bfs(ret *[][]int, level int, node *TreeNode) {
 	if node.Left == nil && node.Right == nil {
 		return
 	}
-	bfs(ret, level+1, node.Right)
-	bfs(ret, level+1, node.Left)
+	dfs(ret, level+1, node.Right)
+	dfs(ret, level+1, node.Left)
 }
 
 func levelOrderBottom(root *TreeNode) (ret [][]int) {
-	bfs(&ret, 0, root)
+	dfs(&ret, 0, root)
 	return
 }
