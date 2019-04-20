@@ -39,6 +39,6 @@
 --
 --
 SELECT Name as Employee FROM
-    (SELECT e1.Name, e1.Salary, e2.Salary as ManagerSalary FROM Employee e1 LEFT JOIN Employee e2
+    (SELECT e1.Name, e1.Salary, e2.Salary as ManagerSalary FROM Employee e1 JOIN Employee e2
         ON e1.ManagerId = e2.Id) as TMP
 WHERE TMP.Salary > TMP.ManagerSalary
