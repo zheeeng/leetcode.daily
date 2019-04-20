@@ -1,0 +1,42 @@
+--
+-- @lc app=leetcode id=182 lang=mysql
+--
+-- [182] Duplicate Emails
+--
+-- https://leetcode.com/problems/duplicate-emails/description/
+--
+-- database
+-- Easy (53.31%)
+-- Total Accepted:    107.9K
+-- Total Submissions: 200.9K
+-- Testcase Example:  '{"headers": {"Person": ["Id", "Email"]}, "rows": {"Person": [[1, "a@b.com"], [2, "c@d.com"], [3, "a@b.com"]]}}'
+--
+-- Write a SQL query to find all duplicate emails in a table named Person.
+--
+--
+-- +----+---------+
+-- | Id | Email   |
+-- +----+---------+
+-- | 1  | a@b.com |
+-- | 2  | c@d.com |
+-- | 3  | a@b.com |
+-- +----+---------+
+--
+--
+-- For example, your query should return the following for the above table:
+--
+--
+-- +---------+
+-- | Email   |
+-- +---------+
+-- | a@b.com |
+-- +---------+
+--
+--
+-- Note: All emails are in lowercase.
+--
+--
+SELECT DISTINCT Email FROM Person WHERE Id NOT IN
+    (SELECT Id FROM
+        (SELECT min(Id) as Id FROM Person GROUP BY Email) AS DistinctPerson
+    )
