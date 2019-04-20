@@ -38,4 +38,4 @@
 --
 --
 # No pass, need to handle empty data situation, returns null
-SELECT Salary AS SecondHighestSalary FROM Employee ORDER BY Salary LIMIT 1 OFFSET 1
+SELECT Salary AS SecondHighestSalary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1
