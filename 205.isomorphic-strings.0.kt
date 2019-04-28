@@ -42,7 +42,7 @@
  * You may assume both s and t have the same length.
  *
  */
-class Solution {
+class Solution_isIsomorphic_0 {
     fun isIsomorphic(s: String, t: String): Boolean =
         (s zip t).toSet().size.let { it == s.toSet().size && it == t.toSet().size }
 }
