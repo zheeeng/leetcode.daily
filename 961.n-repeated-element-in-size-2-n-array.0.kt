@@ -3,7 +3,7 @@
  *
  * [961] N-Repeated Element in Size 2N Array
  */
-class Solution {
+class Solution_repeatedNTimes_0 {
     fun repeatedNTimes(A: IntArray): Int =
         A.toList()
             .zip(A.toList().drop(1) + A.first())
