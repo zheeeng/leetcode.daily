@@ -3,7 +3,7 @@
  *
  * [507] Perfect Number
  */
-class Solution {
+class Solution_checkPerfectNumber_0 {
     fun checkPerfectNumber(num: Int): Boolean {
         if (num % 2 != 0) return false
 
