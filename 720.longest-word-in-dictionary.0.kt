@@ -3,7 +3,7 @@
  *
  * [720] Longest Word in Dictionary
  */
-class Solution {
+class Solution_longestWord_0 {
     fun longestWord(words: Array<String>): String {
         return words.filter { word ->
             word.mapIndexed { i, _ ->
