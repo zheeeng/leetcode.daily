@@ -3,7 +3,7 @@
  *
  * [1010] Pairs of Songs With Total Durations Divisible by 60
  */
-class Solution {
+class Solution_numPairsDivisibleBy60_0 {
     fun combin2s (n: Int): Int {
         return n * (n - 1) / 2
     }
