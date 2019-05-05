@@ -6,6 +6,7 @@
 func robotSim(commands []int, obstacles [][]int) int {
     x, y := 0, 0
     xDir, yDir := 0, 1
+    max := 0
     for _, command := range commands {
         switch command {
         case -1:
@@ -19,28 +20,28 @@ func robotSim(commands []int, obstacles [][]int) int {
                 if o[0] == x {
                     if diffY > 0 && o[1] > y && o[1] <= y + diffY {
                         diffY = o[1] - 1 - y
-                        break
                     }
                     if diffY < 0 && o[1] < y && o[1] >= y + diffY {
-                        diffY = o[1] - 1 - y
-                        break
+                        diffY = o[1] + 1 - y
                     }
                 }
                 if o[1] == y {
                     if diffX > 0 && o[0] > x && o[0] <= x + diffX {
                         diffX = o[0] - 1 - x
-                        break
                     }
                     if diffX < 0 && o[0] < x && o[0] >= x + diffX {
-                        diffX = o[0] - 1 - x
-                        break
+                        diffX = o[0] + 1 - x
                     }
                 }
             }
 
             x += diffX
             y += diffY
+            s := x * x + y * y
+            if s > max {
+                max = s
+            }
         }
     }
-    return x * x + y * y
+    return max
 }
