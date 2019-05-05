@@ -3,7 +3,7 @@
  *
  * [944] Delete Columns to Make Sorted
  */
-class Solution {
+class Solution_transpose_0 {
     fun transpose(A: List<String>): List<String> {
         val cols = A[0].length
         return A.fold(Array(cols) { "" }.toList()) { list, str ->
