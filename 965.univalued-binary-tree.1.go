@@ -57,31 +57,33 @@ func isUnivalTree(root *TreeNode) bool {
 	}
 
 	val := root.Val
-	list := []*TreeNode{root}
+	nodeList := []*TreeNode{root}
 	lastNode := root
 
-	for len(list) > 0 {
+	for len(nodeList) > 0 {
 		for lastNode.Left != nil {
 			if lastNode.Left.Val != val {
 				return false
 			}
 
 			lastNode = lastNode.Left
-			list = append(list, lastNode)
+			nodeList = append(nodeList, lastNode)
 		}
 
-		lastNode, list = list[len(list)-1], list[:len(list)-1]
+        for len(nodeList) > 0 {
+            lastNode, nodeList = nodeList[len(nodeList)-1], nodeList[:len(nodeList)-1]
 
-		if lastNode.Right != nil {
-			if lastNode.Right.Val != val {
-				return false
-			}
+            if lastNode.Right != nil {
+				if lastNode.Right.Val != val {
+					return false
+				}
 
-			lastNode = lastNode.Right
-			list = append(list, lastNode)
-		}
+                lastNode = lastNode.Right
+                nodeList = append(nodeList, lastNode)
+                break
+            }
+        }
 	}
 
 	return true
 }
-
