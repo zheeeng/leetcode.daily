@@ -3,7 +3,7 @@
  *
  * [867] Transpose Matrix
  */
-class Solution {
+class Solution_transpose_0 {
     fun transpose(A: Array<IntArray>): Array<IntArray> {
         val cols = A[0].size
 
