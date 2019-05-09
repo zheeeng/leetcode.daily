@@ -3,7 +3,7 @@
  *
  * [784] Letter Case Permutation
  */
-class Solution {
+class Solution_letterCasePermutation_0 {
     fun letterCasePermutation(S: String): List<String> {
         return S.fold(listOf<String>("")) { list, c ->
             when (c) {
