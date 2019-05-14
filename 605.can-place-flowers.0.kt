@@ -3,7 +3,7 @@
  *
  * [605] Can Place Flowers
  */
-class Solution {
+class Solution_canPlaceFlowers_0 {
     fun canPlaceFlowers(flowerbed: IntArray, n: Int): Boolean {
         if (n == 0) return true
         if (flowerbed.size == 0) return false
