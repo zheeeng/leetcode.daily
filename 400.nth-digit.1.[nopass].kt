@@ -6,7 +6,7 @@
 import kotlin.math.pow
 import kotlin.math.ceil
 
-class Solution {
+class Solution_findNthDigit_1 {
     fun findNthDigit(n: Int): Int {
         val (count, max) = generateSequence(Pair(0, 0)) { (count, max) ->
         	(count + 1).let { Pair(it, max + (it * 10.toDouble().pow(it) * 0.9).toInt()) }.takeIf { it.second < n }
