@@ -8,12 +8,9 @@ func findAnagrams(s string, p string) []int {
         return []int{}
     }
 
-    sLen := len(s)
-    pLen := len(p)
+    sLen, pLen := len(s), len(p)
 
-    i := 0
-    j := 0
-    count := pLen
+    i, j, count := 0, 0, pLen
 
     pCount := map[byte]int{}
 
@@ -24,8 +21,7 @@ func findAnagrams(s string, p string) []int {
     ret := []int{}
 
     for j < sLen {
-        si := s[i]
-        sj := s[j]
+        si, sj := s[i], s[j]
         if pCount[sj] > 0 {
             count--
         }
