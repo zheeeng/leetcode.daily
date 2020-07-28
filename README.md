@@ -2,6 +2,7 @@
     <img src="https://img.shields.io/badge/LeetCode-.Daily-f89f1b.svg?style=popout-square&logo=leetcode&cacheSeconds=3600" alt="LeetCode.daily" style="max-width:100%;" height="64"/>
 </h1>
 
+![LeetCode progress](https://leetcode-badge.chyroc.cn/?name=zheeeng&refresh=true)
 
 ![No PR](https://img.shields.io/badge/No-PR-red.svg?style=flat-square&logo=git&cacheSeconds=3600)
 ![No Fork](https://img.shields.io/badge/No-Fork-red.svg?style=flat-square&logo=git&cacheSeconds=3600)
